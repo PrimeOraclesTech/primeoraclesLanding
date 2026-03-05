@@ -24,7 +24,7 @@ export function BenefitsSection() {
           <BenefitCard
             title={
               <>
-                Медийный буст от Блогеры
+                Медийный буст от Блогера
                 <br />
                 (YouTube на 7 млн)
                 <br />

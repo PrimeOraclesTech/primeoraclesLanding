@@ -1,4 +1,5 @@
 import { SpotLightShoeShape } from '@/assets/graphics/SpotLightShoeShape';
+import partnership from '@/assets/partnership.jpg';
 
 export function PartnershipSection() {
   return (
@@ -6,14 +7,12 @@ export function PartnershipSection() {
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full md:w-5/12 shrink-0 flex justify-center">
-            <div className="rounded-2xl overflow-hidden max-w-[320px] md:max-w-full">
-              <img
-                src="/img/illustrations/partnership.jpg"
-                alt="Партнёрство с Prime Oracles"
-                className="w-full h-auto object-cover"
-                loading="lazy"
-              />
-            </div>
+            <img
+              src={partnership}
+              alt="Партнёрство с Prime Oracles"
+              className="w-full max-w-[320px] md:max-w-full h-auto object-cover rounded-[10rem] overflow-hidden"
+              loading="lazy"
+            />
           </div>
           <div className="w-full md:w-7/12">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">

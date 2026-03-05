@@ -4,8 +4,8 @@ import { SpotLightShoeShape } from '../../assets/graphics/SpotLightShoeShape.tsx
 export function HeroSection() {
   return (
     <div className="relative p-4 md:p-6 lg:p-8 flex flex-col items-center">
-      <div className="flex items-center relative mb-36 gap-6 min-[900px]:mt-20 z-1 w-full max-w-screen-2xl min-[900px]:flex-row flex-col">
-        <div className="w-max max-w-full z-10 items-center flex flex-col min-[900px]:items-start min-[900px]:block">
+      <div className="flex items-center relative mb-36 gap-6 min-[900px]:mt-20 z-1 w-full max-w-screen-2xl mx-auto min-[900px]:flex-row flex-col">
+        <div className="w-full min-[900px]:w-[40%] min-[900px]:shrink-0 z-10 items-center flex flex-col min-[900px]:items-start min-[900px]:block">
           <h1 className="flex min-[900px]:flex-col gap-x-4 flex-wrap items-start text-6xl min-[280px]:text-7xl xl:text-8xl min-[1660px]:text-[120px] font-bebas text-light-accent tracking-wider mb-4">
             <span>PRIME</span>
             <span className="min-[1660px]:text-[130px]">ORACLES</span>
