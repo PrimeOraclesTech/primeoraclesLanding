@@ -25,7 +25,7 @@ export function PartnershipSection() {
               экосистему будущего вместе.
             </p>
             <a
-              href="#"
+              href="mailto:primeoracles.po@gmail.com"
               className="inline-flex items-center justify-center border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
             >
               Стать партнером
