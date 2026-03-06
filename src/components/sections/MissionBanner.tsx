@@ -1,3 +1,5 @@
+import { EmailForm } from '@/components/ui/email-form';
+
 export function MissionBanner() {
   return (
     <section className="w-full px-4 md:px-8 pb-12 md:pb-16">
@@ -12,16 +14,10 @@ export function MissionBanner() {
           <h2 className="font-oswald text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
             Наша миссия — обеспечить каждому доход
           </h2>
-          <div className="flex items-stretch gap-0 w-full max-w-md">
-            <input
-              type="email"
-              placeholder="name@email.com"
-              className="flex-1 min-w-0 bg-white/15 backdrop-blur-sm border border-white/20 border-r-0 rounded-l-md px-4 py-3 text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:ring-white/40"
-            />
-            <button className="shrink-0 bg-primary text-primary-foreground px-5 py-3 rounded-r-md font-bold text-sm hover:bg-primary/90 transition-colors cursor-pointer whitespace-nowrap">
-              Забрать Бонус
-            </button>
-          </div>
+          <EmailForm
+            className="w-full max-w-md"
+            inputClassName="bg-white/15 backdrop-blur-sm border-white/20 text-white placeholder:text-white/50 focus:ring-white/40"
+          />
         </div>
       </div>
     </section>

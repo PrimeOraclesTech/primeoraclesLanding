@@ -1,5 +1,6 @@
 import { SpotLightShape } from '@/assets/graphics/SpotLightShape';
 import { SpotLightShoeShape } from '@/assets/graphics/SpotLightShoeShape';
+import { EmailForm } from '@/components/ui/email-form';
 
 export function HeroSection() {
   return (
@@ -17,16 +18,7 @@ export function HeroSection() {
             <br />
             ручной возни
           </p>
-          <div className="flex items-stretch gap-0 max-w-sm mt-5">
-            <input
-              type="email"
-              placeholder="name@email.com"
-              className="flex-1 min-w-0 bg-transparent border border-[#2E2E2E] border-r-0 rounded-l-md px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary/50"
-            />
-            <button className="shrink-0 bg-primary text-primary-foreground px-5 py-3 rounded-r-md font-bold text-sm hover:bg-primary/90 transition-colors cursor-pointer whitespace-nowrap border border-primary">
-              Забрать Бонус
-            </button>
-          </div>
+          <EmailForm className="max-w-sm mt-5" />
         </div>
         <img
           className="min-w-0 max-w-[min(900px,100%)] -z-10 flex-1 w-[480px] min-[900px]:w-[55%] lg:w-[60%] min-[1300px]:w-full"
