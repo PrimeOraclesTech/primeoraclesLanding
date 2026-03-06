@@ -2,7 +2,7 @@ import logo1 from '@/assets/logo-1.png';
 import logo2 from '@/assets/logo-2.png';
 import logo3 from '@/assets/logo-3.png';
 import logo4 from '@/assets/logo-4.png';
-import { SpotLightShoeShape } from '@/assets/graphics/SpotLightShoeShape.tsx';
+
 
 const FEATURED_REWARD = {
   name: 'Unblox Game',
@@ -21,7 +21,7 @@ const REWARDS_DATA = [
   {
     name: 'Eleps',
     avatar: logo2,
-    description: 'Нарезки со стримов и видео на ютубе',
+    description: 'Получайте выплаты за нерезки стримов и в...',
     rate: '$2.50/1K',
     paidAmount: '32,795.5$',
     totalAmount: '50,000$',
@@ -59,6 +59,8 @@ const REWARDS_DATA = [
 export function MarketplaceInfoSection() {
   return (
     <section className="relative z-0 w-full px-4 md:px-8 pb-12 md:pb-20">
+      <div className="absolute -top-32 -left-24 w-[500px] h-[500px] bg-primary/4 rounded-full blur-[160px] pointer-events-none -z-10" />
+      <div className="absolute -bottom-24 -right-16 w-[400px] h-[400px] bg-[#7B3FD4]/3.5 rounded-full blur-[140px] pointer-events-none -z-10" />
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-center">
           Больше чем маркетплейс
@@ -86,7 +88,6 @@ export function MarketplaceInfoSection() {
             </div>
             <RewardCard reward={FEATURED_REWARD} />
           </div>
-          <SpotLightShoeShape className="text-white absolute left-0 max-w-[25vw] top-1/2 -translate-y-1/2 pointer-events-none blur-[128px] opacity-20 -z-10" />
           {/* Bottom: 3 cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {REWARDS_DATA.map((reward) => (

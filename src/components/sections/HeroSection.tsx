@@ -1,12 +1,12 @@
-import { SpotLightShape } from '../../assets/graphics/SpotLightShape.tsx';
-import { SpotLightShoeShape } from '../../assets/graphics/SpotLightShoeShape.tsx';
+import { SpotLightShape } from '@/assets/graphics/SpotLightShape';
+import { SpotLightShoeShape } from '@/assets/graphics/SpotLightShoeShape';
 
 export function HeroSection() {
   return (
     <div className="relative p-4 md:p-6 lg:p-8 flex flex-col items-center">
       <div className="flex items-center relative mb-36 gap-6 min-[900px]:mt-20 z-1 w-full max-w-screen-2xl mx-auto min-[900px]:flex-row flex-col">
         <div className="w-full min-[900px]:w-[40%] min-[900px]:shrink-0 z-10 items-center flex flex-col min-[900px]:items-start min-[900px]:block">
-          <h1 className="flex min-[900px]:flex-col gap-x-4 flex-wrap items-start text-6xl min-[280px]:text-7xl xl:text-8xl min-[1660px]:text-[120px] font-bebas text-light-accent tracking-wider mb-4">
+          <h1 className="flex min-[900px]:flex-col gap-x-4 flex-nowrap items-start text-[clamp(3rem,12vw,4.5rem)] min-[900px]:text-7xl xl:text-8xl min-[1660px]:text-[120px] font-bebas text-light-accent tracking-wider mb-4 whitespace-nowrap">
             <span>PRIME</span>
             <span className="min-[1660px]:text-[130px]">ORACLES</span>
           </h1>
@@ -41,8 +41,8 @@ export function HeroSection() {
             alt="Hero graphics"
           />
 
-          <SpotLightShape className="text-accent absolute right-[25vw] max-w-[28vw] w-[400px] h-[400px] top-1/2 -translate-y-1/2 pointer-events-none blur-[128px] opacity-60 -z-20" />
-          <SpotLightShoeShape className="text-white absolute right-0 max-w-[25vw] top-1/2 -translate-y-[calc(50%-8em)] pointer-events-none blur-[128px] opacity-20 -z-20" />
+          <SpotLightShape className="text-accent absolute right-[25vw] max-w-[28vw] w-[400px] h-[400px] top-1/2 -translate-y-1/2 pointer-events-none blur-[200px] opacity-60 -z-20" />
+          <SpotLightShoeShape className="text-white absolute right-0 max-w-[25vw] top-1/2 -translate-y-[calc(50%-8em)] pointer-events-none blur-[200px] opacity-20 -z-20" />
       </div>
     </div>
   );

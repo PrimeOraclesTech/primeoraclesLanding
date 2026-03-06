@@ -1,2 +1,1 @@
-export { TikTokIcon } from "./TikTokIcon";
-export { BrandLogo } from "./BrandLogo";
+export { BrandLogo } from './BrandLogo';

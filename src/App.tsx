@@ -1,4 +1,4 @@
-import './output.css';
+import './input.css';
 import {
   HeroSection,
   MarketplaceInfoSection,
@@ -18,10 +18,13 @@ export function App() {
       <HeroSection />
       <MarketplaceInfoSection />
       <ProductsSection />
+      <div className="w-full h-px bg-linear-to-r from-transparent via-primary/15 to-transparent" />
       <BenefitsSection />
       <JoinSection />
+      <div className="w-full h-px bg-linear-to-r from-transparent via-border to-transparent" />
       <EducationSection />
       <FAQSection />
+      <div className="w-full h-px bg-linear-to-r from-transparent via-primary/15 to-transparent" />
       <PartnershipSection />
       <MissionBanner />
       <Footer />

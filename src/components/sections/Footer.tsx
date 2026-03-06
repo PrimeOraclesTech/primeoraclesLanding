@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="w-full border-t border-border relative">
       <div className="max-w-7xl mx-auto py-5 px-4 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-muted-foreground text-xs">
-          &copy; 2025 PrimeOracles | Все права защищены
+          &copy; 2026 PrimeOracles | Все права защищены
         </p>
         <div className="flex items-center gap-3">
           <SocialCircle href="#" label="TikTok">

@@ -1,9 +1,7 @@
-import { SpotLightDiskShape } from '@/assets/graphics/SpotLightDiskShape';
 import productCrypto from '@/assets/product-crypto.jpg';
 import productSoftware from '@/assets/product-software.jpg';
 import productTradingBot from '@/assets/product-trading-bot.jpg';
 import productWealth from '@/assets/product-wealth.jpg';
-import { SpotLightShoeShape } from "@/assets/graphics/SpotLightShoeShape";
 
 const PRODUCTS = [
   {
@@ -20,25 +18,25 @@ const PRODUCTS = [
     title: 'Продажа торгового бота на форексе',
     cover: productTradingBot,
     creator: 'The Haven Free',
-    price: 230.0,
+    price: 40.0,
     rating: 4.1,
     reviews: 521,
   },
   {
     id: '3',
-    title: 'Аренда Adobe Photoshop + AI',
+    title: 'Софт по авто-созданию контента в Adobe',
     cover: productSoftware,
     creator: 'Quavo Speaks',
-    price: 10.0,
+    price: 100.0,
     rating: 5.0,
     reviews: 19,
   },
   {
     id: '4',
-    title: '№1 комьюнити по торговле криптовалютой',
+    title: '№1 комьюнити по заработку с AI',
     cover: productWealth,
     creator: 'Wealth Group Credit Card Pay',
-    price: 230.0,
+    price: 10.0,
     rating: 4.95,
     reviews: 421,
   },
@@ -47,6 +45,8 @@ const PRODUCTS = [
 export function ProductsSection() {
   return (
     <section className="w-full px-4 md:px-8 pb-12 md:pb-20 relative z-0">
+      <div className="absolute -top-24 right-0 w-[500px] h-[400px] bg-[#7B3FD4]/4 rounded-full blur-[160px] pointer-events-none -z-10" />
+      <div className="absolute bottom-0 -left-16 w-[400px] h-[400px] bg-primary/3.5 rounded-full blur-[140px] pointer-events-none -z-10" />
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10 relative">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -68,7 +68,6 @@ export function ProductsSection() {
           ))}
         </div>
       </div>
-      <SpotLightShoeShape className="text-white absolute right-0 max-w-[25vw] top-1/2 -translate-y-1/2 pointer-events-none blur-[128px] opacity-20 -z-10" />
     </section>
   );
 }
@@ -104,32 +103,36 @@ function ProductCard({ product }: { product: (typeof PRODUCTS)[number] }) {
   );
 }
 
+let halfStarCounter = 0;
+
 function Stars({ rating }: { rating: number }) {
   const full = Math.floor(rating);
   const hasHalf = rating - full >= 0.25 && rating - full < 0.75;
   const empty = 5 - full - (hasHalf ? 1 : 0);
+  const gradientId = `halfStar-${++halfStarCounter}`;
+  const starPath = 'M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z';
 
   return (
     <div className="flex items-center gap-px">
       {Array.from({ length: full }).map((_, i) => (
         <svg key={`f${i}`} className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          <path d={starPath} />
         </svg>
       ))}
       {hasHalf && (
         <svg className="w-3 h-3 text-primary" viewBox="0 0 20 20">
           <defs>
-            <linearGradient id="halfStar">
+            <linearGradient id={gradientId}>
               <stop offset="50%" stopColor="currentColor" />
               <stop offset="50%" stopColor="#3a3a3a" />
             </linearGradient>
           </defs>
-          <path fill="url(#halfStar)" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          <path fill={`url(#${gradientId})`} d={starPath} />
         </svg>
       )}
       {Array.from({ length: empty }).map((_, i) => (
         <svg key={`e${i}`} className="w-3 h-3 text-[#3a3a3a]" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          <path d={starPath} />
         </svg>
       ))}
     </div>

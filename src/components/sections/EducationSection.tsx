@@ -1,5 +1,4 @@
-import { SpotLightShoeShape } from '@/assets/graphics/SpotLightShoeShape';
-import learning1 from '@/assets/learning1.png';
+import learning1 from '@/assets/learning1.jpg';
 import learning2 from '@/assets/learning2.png';
 
 interface LearningCardProps {
@@ -24,6 +23,8 @@ const LEARNING_CARDS: LearningCardProps[] = [
 export function EducationSection() {
   return (
     <section className="relative z-0 w-full px-4 md:px-8 pb-12 md:pb-20">
+      <div className="absolute top-0 -left-16 w-[400px] h-[500px] bg-white/2 rounded-full blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute -bottom-20 right-0 w-[350px] h-[350px] bg-[#7B3FD4]/3 rounded-full blur-[130px] pointer-events-none -z-10" />
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8">
           Наш сайт подходит каждому, ведь у нас есть
@@ -39,7 +40,6 @@ export function EducationSection() {
           Практические материалы о том, как работать с платформой, создавать продающий контент и увеличивать просмотры.
         </p>
       </div>
-      <SpotLightShoeShape className="text-white absolute right-0 max-w-[25vw] top-1/2 -translate-y-1/2 pointer-events-none blur-[128px] opacity-20 -z-10" />
     </section>
   );
 }

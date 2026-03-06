@@ -1,9 +1,9 @@
-import { SpotLightShoeShape } from '@/assets/graphics/SpotLightShoeShape';
 import partnership from '@/assets/partnership.jpg';
 
 export function PartnershipSection() {
   return (
     <section className="relative z-0 w-full px-4 md:px-8 pb-12 md:pb-20">
+      <div className="absolute top-1/2 -right-16 -translate-y-1/2 w-[400px] h-[400px] bg-primary/4 rounded-full blur-[150px] pointer-events-none -z-10" />
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full md:w-5/12 shrink-0 flex justify-center">
@@ -33,7 +33,6 @@ export function PartnershipSection() {
           </div>
         </div>
       </div>
-      <SpotLightShoeShape className="text-white absolute left-0 max-w-[25vw] top-1/2 -translate-y-1/2 pointer-events-none blur-[128px] opacity-20 -z-10" />
     </section>
   );
 }

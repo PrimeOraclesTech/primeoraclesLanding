@@ -45,7 +45,8 @@ const FAQ_DATA = [
 
 export function FAQSection() {
   return (
-    <section className="w-full px-4 md:px-8 pb-12 md:pb-20">
+    <section className="relative z-0 w-full px-4 md:px-8 pb-12 md:pb-20">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[300px] bg-primary/2.5 rounded-full blur-[150px] pointer-events-none -z-10" />
       <div className="max-w-7xl mx-auto">
         <h2 className="text-xl md:text-2xl font-bold text-center mb-6">
           Вопросы которые могут возникнуть:
