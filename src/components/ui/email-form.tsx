@@ -80,6 +80,9 @@ export function EmailForm({
       {status === 'error' && (
         <p className="text-destructive text-xs mt-2">{errorMessage}</p>
       )}
+      <p className="text-muted-foreground/50 text-[11px] mt-2.5 leading-snug">
+        Нажимая кнопку, вы соглашаетесь получать обновления о платформе на указанный email.
+      </p>
     </div>
   );
 }
