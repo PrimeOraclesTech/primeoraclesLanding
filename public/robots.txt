@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://primeoracles.info/sitemap.xml
+
+Host: https://primeoracles.info

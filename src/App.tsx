@@ -15,18 +15,20 @@ import {
 export function App() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <HeroSection />
-      <MarketplaceInfoSection />
-      <ProductsSection />
-      <div className="w-full h-px bg-linear-to-r from-transparent via-primary/15 to-transparent" />
-      <BenefitsSection />
-      <JoinSection />
-      <div className="w-full h-px bg-linear-to-r from-transparent via-border to-transparent" />
-      <EducationSection />
-      <FAQSection />
-      <div className="w-full h-px bg-linear-to-r from-transparent via-primary/15 to-transparent" />
-      <PartnershipSection />
-      <MissionBanner />
+      <main>
+        <HeroSection />
+        <MarketplaceInfoSection />
+        <ProductsSection />
+        <div className="w-full h-px bg-linear-to-r from-transparent via-primary/15 to-transparent" aria-hidden="true" />
+        <BenefitsSection />
+        <JoinSection />
+        <div className="w-full h-px bg-linear-to-r from-transparent via-border to-transparent" aria-hidden="true" />
+        <EducationSection />
+        <FAQSection />
+        <div className="w-full h-px bg-linear-to-r from-transparent via-primary/15 to-transparent" aria-hidden="true" />
+        <PartnershipSection />
+        <MissionBanner />
+      </main>
       <Footer />
     </div>
   );
