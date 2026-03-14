@@ -1,5 +1,3 @@
-import { EmailForm } from '@/components/ui/email-form';
-
 export function MissionBanner() {
   return (
     <section className="w-full px-4 md:px-8 pb-12 md:pb-16">
@@ -14,10 +12,14 @@ export function MissionBanner() {
           <h2 className="font-oswald text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
             Наша миссия — обеспечить каждому доход
           </h2>
-          <EmailForm
-            className="w-full max-w-md"
-            inputClassName="bg-white/15 backdrop-blur-sm border-white/20 text-white placeholder:text-white/50 focus:ring-white/40"
-          />
+          <a
+            href="https://t.me/primeoracles"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-white/15 backdrop-blur-sm border border-white/20 text-white px-8 py-3 rounded-md font-bold text-sm hover:bg-white/25 transition-colors"
+          >
+            Присоединиться
+          </a>
         </div>
       </div>
     </section>

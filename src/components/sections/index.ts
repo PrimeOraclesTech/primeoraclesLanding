@@ -4,6 +4,7 @@ export { ProductsSection } from './ProductsSection';
 export { BenefitsSection } from './BenefitsSection';
 export { JoinSection } from './JoinSection';
 export { EducationSection } from './EducationSection';
+export { UsdtSection } from './UsdtSection';
 export { FAQSection } from './FAQSection';
 export { PartnershipSection } from './PartnershipSection';
 export { MissionBanner } from './MissionBanner';

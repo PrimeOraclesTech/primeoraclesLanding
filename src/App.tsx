@@ -6,6 +6,7 @@ import {
   BenefitsSection,
   JoinSection,
   EducationSection,
+  UsdtSection,
   FAQSection,
   PartnershipSection,
   MissionBanner,
@@ -24,6 +25,7 @@ export function App() {
         <JoinSection />
         <div className="w-full h-px bg-linear-to-r from-transparent via-border to-transparent" aria-hidden="true" />
         <EducationSection />
+        <UsdtSection />
         <FAQSection />
         <div className="w-full h-px bg-linear-to-r from-transparent via-primary/15 to-transparent" aria-hidden="true" />
         <PartnershipSection />

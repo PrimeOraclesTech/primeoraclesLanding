@@ -1,6 +1,5 @@
 import { SpotLightShape } from '@/assets/graphics/SpotLightShape';
 import { SpotLightShoeShape } from '@/assets/graphics/SpotLightShoeShape';
-import { EmailForm } from '@/components/ui/email-form';
 
 export function HeroSection() {
   return (
@@ -18,7 +17,14 @@ export function HeroSection() {
             <br />
             ручной возни
           </p>
-          <EmailForm className="max-w-sm mt-5" />
+          <a
+            href="https://t.me/primeoracles"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center mt-5 bg-primary text-primary-foreground px-8 py-3 rounded-md font-bold text-sm hover:bg-primary/90 transition-colors"
+          >
+            Присоединиться
+          </a>
         </div>
         <img
           className="min-w-0 max-w-[min(900px,100%)] -z-10 flex-1 w-[480px] min-[900px]:w-[55%] lg:w-[60%] min-[1300px]:w-full"
